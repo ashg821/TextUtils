@@ -4,9 +4,9 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar.js";
 import Form from "./components/Form.js";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";     //<Switch> has been replaced by <Routes> and component have been replaced by element 
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //<Switch> has been replaced by <Routes> and component have been replaced by element
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -82,30 +82,30 @@ function App() {
   return (
     // <> is JSX fragment and helps us to return more than one component to our index.js
     <>
-      <Router>
-        <Navbar
-          text="TextUtils"
-          about="About Us"
-          mode={mode}
-          toggleBar={toggleBar}
-          mode2={mode2}
-          toggleBar2={toggleBar2}
-          mode3={mode3}
-          toggleBar3={toggleBar3}
-        />
-        {/* <Navbar/> */}
-        <Alert alert={alert} />
+      <Navbar
+        text="TextUtils"
+        about="About Us"
+        mode={mode}
+        toggleBar={toggleBar}
+        mode2={mode2}
+        toggleBar2={toggleBar2}
+        mode3={mode3}
+        toggleBar3={toggleBar3}
+      />
+      {/* <Navbar/> */}
+      <Alert alert={alert} />
+      <Form heading="Enter the text to analyze" showAlert={showAlert} />
 
+      {/* <Router>
         <Routes>
           <Route
             path="/"
             element={
-              <Form heading="Enter the text to analyze" showAlert={showAlert} />
             }
-          />
+            />
           <Route path="/about" element={<About />} />
         </Routes>
-      </Router>
+      </Router> */}
     </>
   );
 }
