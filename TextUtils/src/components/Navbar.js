@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Link} from 'react-router-dom'         //using Link and to instead of a and href allows us to show page on a clicked link without a reload
+// import {Link} from 'react-router-dom'         //using Link and to instead of a and href allows us to show page on a clicked link without a reload
 
 export default function Navbar(props) {
   return (
