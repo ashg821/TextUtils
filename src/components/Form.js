@@ -25,7 +25,7 @@ export default function Form(props) {
     }
     let insertComma=()=>{
         let regex=/\s/g;
-        setText(text.replace(regex, ","));=
+        setText(text.replace(regex, ","));
     }
     let removeSpaces=()=>{
         let regex=/\s{2,}/g;
