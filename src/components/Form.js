@@ -25,7 +25,7 @@ export default function Form(props) {
     }
     let insertComma=()=>{
         let regex=/\s/g;
-        setText(text.replace(regex, ","));
+        setText(text.replace(regex, ","));=
     }
     let removeSpaces=()=>{
         let regex=/\s{2,}/g;
@@ -40,10 +40,10 @@ export default function Form(props) {
       <div className="mb-3">
         <textarea className="form-control" id="textBox" rows="8" value={text} onChange={onChangeHandler} onDoubleClick={onClickTextboxHandler}></textarea>
       </div>
-      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={onclickButtonHandlerUpper}>Convert to Uppercase</button>
-      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={onclickButtonHandlerLower}>Convert to Lowecase</button>
-      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={insertComma}>Replace Space</button>
-      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={removeSpaces}>Remove Spaces</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length===0?'disabled':""}`} onClick={onclickButtonHandlerUpper}>Convert to Uppercase</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length===0?'disabled':""}`} onClick={onclickButtonHandlerLower}>Convert to Lowecase</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length===0?'disabled':""}`} onClick={insertComma}>Replace Space</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length===0?'disabled':""}`} onClick={removeSpaces}>Remove Spaces</button>
     </div>
     <div className="container my-3">
         <h2>Some other details</h2>
