@@ -40,10 +40,10 @@ export default function Form(props) {
       <div className="mb-3">
         <textarea className="form-control" id="textBox" rows="8" value={text} onChange={onChangeHandler} onDoubleClick={onClickTextboxHandler}></textarea>
       </div>
-      <button className="btn btn-primary mx-2" onClick={onclickButtonHandlerUpper}>Convert to Uppercase</button>
-      <button className="btn btn-primary mx-2" onClick={onclickButtonHandlerLower}>Convert to Lowecase</button>
-      <button className="btn btn-primary mx-2" onClick={insertComma}>Replace Space</button>
-      <button className="btn btn-primary mx-2" onClick={removeSpaces}>Remove Spaces</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={onclickButtonHandlerUpper}>Convert to Uppercase</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={onclickButtonHandlerLower}>Convert to Lowecase</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={insertComma}>Replace Space</button>
+      <button className="btn btn-primary mx-2 my-2" onClick={removeSpaces}>Remove Spaces</button>
     </div>
     <div className="container my-3">
         <h2>Some other details</h2>
