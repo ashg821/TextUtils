@@ -40,26 +40,27 @@ export default function Form(props) {
       <div className="mb-3">
         <textarea className="form-control" id="textBox" rows="8" value={text} onChange={onChangeHandler} onDoubleClick={onClickTextboxHandler}></textarea>
       </div>
-      <button className="btn btn-primary mx-2 my-2" onClick={onclickButtonHandlerUpper}>Convert to Uppercase</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={onclickButtonHandlerLower}>Convert to Lowecase</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={insertComma}>Replace Space</button>
-      <button className="btn btn-primary mx-2 my-2" onClick={removeSpaces}>Remove Spaces</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={onclickButtonHandlerUpper}>Convert to Uppercase</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={onclickButtonHandlerLower}>Convert to Lowecase</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={insertComma}>Replace Space</button>
+      <button className={`btn btn-primary mx-2 my-2 ${text.split(" ").filter((element)=>element.length!==0).join(" ").length==0?'disabled':""}`} onClick={removeSpaces}>Remove Spaces</button>
     </div>
     <div className="container my-3">
         <h2>Some other details</h2>
         <ul>
             <li>
-                Number of character: {text.length}
+                Number of character: {text.split(" ").filter((element)=>element.length!==0).join(" ").length}
             </li>
             <li>
-                Number of words: {text.split(" ").length}
+                Number of words: {text.split(" ").filter((element)=>element.length!==0).length}
             </li>
-            <li>
-                Estimated time to read(at speed 300WPM): {text.split(" ").length*0.0034} Minutes
+            <li>    
+                {console.log(text.split(" ").filter((element)=>element.length!==0))}
+                Estimated time to read(at speed 300WPM): {text.split(" ").filter((element)=>element.length!==0).length*0.0034} Minutes
             </li>
         </ul>
         <h2>Preview</h2>
-        <p>{text.length>0?text:"Enter something to preview"}</p>
+        <p>{text.split(" ").filter((element)=>element.length!==0).join(" ").length>0?text:"Enter something to preview"}</p>
     </div>
     </>
   );
